@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { Task } from "../task/Task";
-
+import './ToDo.css';
 
 
 export const ToDo = () => {
@@ -48,14 +48,18 @@ export const ToDo = () => {
 
     return(
         <div className="ToDo">
-            <input type="text" value={task} placeholder={taskIdea} onChange={(e) => setTask(e.target.value)}/>
-            <button onClick={addTask}>+</button>
-            {taskList.map((tarea) => ( //se mapea todo el array para tener el objeto y poner manipular cada uno de sus valores
-                <div key={tarea.id}>
-                    {/* se rendereiza un componente task por cada elemento del array tasklist */}
-                    <Task taskText={tarea.text} deleteTask={() => deleteTask(tarea.id)}/>
-                </div>
-            ))}
+            <div className="box-task">
+                <input type="text" value={task} placeholder={taskIdea} onChange={(e) => setTask(e.target.value)}/>
+                <button onClick={addTask}>+</button>
+            </div>
+            <div className="box-tasks">
+                {taskList.map((tarea) => ( //se mapea todo el array para tener el objeto y poner manipular cada uno de sus valores
+                    <div key={tarea.id}>
+                        {/* se rendereiza un componente task por cada elemento del array tasklist */}
+                        <Task taskText={tarea.text} deleteTask={() => deleteTask(tarea.id)}/>
+                    </div>
+                ))}
+            </div>
         </div>
     )
 }

@@ -1,0 +1,6 @@
+.tarea{
+    display: flex;
+    /* width: 50%; */
+    margin: 15px;
+    justify-content: center;
+}
