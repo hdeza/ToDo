@@ -23,7 +23,7 @@ export const ToDo = () => {
         const taskRandom = taskIdeas[Math.floor(Math.random() * taskIdeas.length)];
         setTaskIdea(taskRandom); // cambiamos el estado del placeholder aleatorio
     },[]);
-
+    
     //añadimos la siguiente tarea y reseteamos la variable task
     const addTask = () => {
         if(task !== ''){ //verificar que existe una tarea y no una cadena vacia
