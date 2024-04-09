@@ -2,5 +2,27 @@
     display: flex;
     /* width: 50%; */
     margin: 15px;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 15px auto; /*el auto centra horizontalmente*/
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    /* align-content: space-between; */
+}
+
+.tarea button{
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+}
+
+.delete{
+    font-size: 1.4rem;
+}
+
+.delete:hover{
+    color: rgba(232, 24, 13, 0.81);    
 }
